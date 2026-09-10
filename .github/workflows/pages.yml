@@ -4,7 +4,7 @@ on:
     branches: [main]
   workflow_dispatch:
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
 concurrency:
@@ -18,37 +18,6 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
-      - name: Fetch the prepared site for the initial import
-        if: hashFiles('index.html') == ''
-        uses: actions/checkout@v4
-        with:
-          repository: YanWang-whu/YanWang-whu.github.io
-          ref: 8bac01a18fbe798dbfffb290aa7155c38a28e3f0
-          path: _site-import
-          persist-credentials: false
-      - name: Save the website in this repository
-        if: hashFiles('index.html') == ''
-        run: |
-          python3 - <<'PY'
-          from pathlib import Path
-          import shutil
-          source = Path('_site-import').resolve()
-          assert source.parent == Path.cwd()
-          for entry in source.iterdir():
-              if entry.name in {'.git', '.github'}:
-                  continue
-              target = Path(entry.name)
-              if entry.is_dir():
-                  shutil.copytree(entry, target, dirs_exist_ok=True)
-              else:
-                  shutil.copyfile(entry, target)
-          shutil.rmtree(source)
-          PY
-          git config user.name 'YanWang-yale'
-          git config user.email '327588339+YanWang-yale@users.noreply.github.com'
-          git add .
-          git commit -m 'Publish the prepared personal website'
-          git push origin HEAD:main
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
