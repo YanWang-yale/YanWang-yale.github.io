@@ -1,0 +1,23 @@
+/* Shared lazy-loaded model exhibits in Funding and the interest map. */
+.instrument-showcase{margin-top:26px;border:1px solid #d9e3e6;border-radius:16px;overflow:hidden;background:#eef3f2}
+.instrument-showcase .instrument-preview{display:grid;grid-template-columns:1.4fr 1fr;align-items:center;background:#edf2f1}
+.instrument-showcase .instrument-preview img{display:block;width:100%;height:340px;object-fit:cover}
+.instrument-showcase .instrument-caption{padding:28px}
+.instrument-showcase .instrument-eyebrow{font-size:10px;letter-spacing:1.2px;text-transform:uppercase;color:#527275;margin-bottom:12px}
+.instrument-showcase h4{font-size:23px;line-height:1.3;color:#173341;margin:0 0 14px}
+.instrument-showcase .instrument-caption p{font-size:13px;line-height:1.7;color:#526671}
+.instrument-showcase .instrument-actions{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.instrument-showcase button{border:0;border-radius:7px;background:#1f5260;color:white;padding:11px 16px;font:600 12px/1.4 inherit;cursor:pointer}
+.instrument-showcase a{font-size:12px;color:#305c69;text-underline-offset:4px}
+.instrument-showcase :focus-visible{outline:3px solid #be8d4a;outline-offset:4px}
+.instrument-showcase .instrument-live{background:#f6f7f3}
+.instrument-showcase .instrument-live[hidden]{display:none}
+.instrument-showcase .instrument-livebar{padding:12px 18px;display:flex;justify-content:space-between;align-items:center;gap:15px}
+.instrument-showcase .instrument-livebar span{font-size:11px;color:#50636c}
+.instrument-showcase .instrument-livebar button{padding:6px 11px;font-size:11px}
+.instrument-showcase iframe{display:block;width:100%;height:820px;border:0;border-top:1px solid #d9e3e6;background:#f6f7f3}
+@media(max-width:720px){.instrument-showcase .instrument-preview{grid-template-columns:1fr}.instrument-showcase .instrument-preview img{height:260px;object-fit:contain}.instrument-showcase .instrument-caption{padding:20px}.instrument-showcase iframe{height:850px}.instrument-showcase .instrument-livebar{flex-wrap:wrap}}
+/* The added Funding link needs scroll room at intermediate header widths. */
+@media(min-width:641px) and (max-width:1200px){header .nav{gap:24px}header .logo{flex-shrink:0}header .nav-links{overflow-x:auto;padding-bottom:4px;scrollbar-width:thin}header .nav-links a{flex-shrink:0}}
+/* Keep two inherited overflow cases inside very narrow phone viewports. */
+@media(max-width:400px){.tooltip-box{max-width:calc(100vw - 100px);overflow-wrap:anywhere}.activity-right{flex-wrap:wrap;gap:6px;max-width:100%}}

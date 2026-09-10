@@ -1,0 +1,49 @@
+/* The existing portfolio layout, with readable long-form research panels. */
+.research-card { position: relative; }
+.research-card .research-content { height: 0; max-height: 0; overflow: hidden; transition: none; }
+.research-card.active .research-content { height: auto; max-height: var(--research-panel-height, 65dvh); overflow-y: auto; overscroll-behavior-y: contain; scrollbar-gutter: stable; scrollbar-color: #879bb5 #eef2f7; }
+.research-content:focus-visible { outline: 3px solid #7c99bc; outline-offset: -3px; }
+.research-panel-closebar { display: none; }
+.research-card.research-panel-compact .research-panel-closebar { position: sticky; top: 0; z-index: 2; display: flex; justify-content: flex-end; padding: 8px 16px; border-bottom: 1px solid #dce4ec; background: #f6f8fb; }
+.research-panel-closebar button { min-height: 34px; padding: 5px 12px; border: 1px solid #bac8dc; border-radius: 7px; color: #2f4677; background: #fff; font: inherit; font-size: 14px; cursor: pointer; }
+.research-panel-closebar button:focus-visible { outline: 3px solid #467665; outline-offset: 2px; }
+.research-inner { padding-top: 22px; }
+.research-lead { margin: 0 0 26px; font-size: 18px; line-height: 1.8; color: #2f436e; }
+.research-lead strong { font-weight: 650; }
+.research-figures { display: grid; gap: 26px; margin: 32px 0 12px; }
+.research-figures figure { margin: 0; padding: 14px; background: #f5f8fb; border: 1px solid #dce4ec; border-radius: 14px; }
+.research-figures a { display: block; border-radius: 5px; overflow: hidden; cursor: zoom-in; }
+.research-figures a:focus-visible { outline: 3px solid #537ba4; outline-offset: 4px; }
+.research-figures img { display: block; width: 100%; height: auto; background: #fff; }
+.research-figures figcaption { color: #52647a; font-size: 13px; line-height: 1.7; margin-top: 12px; }
+.research-figures figcaption span { display: block; color: #355780; margin-top: 4px; }
+.research-update { padding-top: 16px; border-top: 1px solid #dce4ec; color: #62758a; }
+.attempt-intro { max-width: 850px; line-height: 1.8; color: #4b6077; }
+.award-number { font-weight: 600; color: #6d8097; margin-right: 4px; }
+.map-area-tabs { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+#what-drives > p { line-height: 1.8; }
+/* Let the longer account use more width; keep the map links next to their card. */
+.hero-interest-stage { align-items: start; }
+.hero-interest-stage .hero-map-panel { align-self: start; }
+.hero-interest-stage .hero-buttons-relocated { margin: 0; }
+@media(min-width:901px) {
+  .hero-interest-stage { grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); }
+  .hero-interest-stage .interest-map-launcher { grid-template-columns: minmax(0, 1fr) 118px; }
+}
+@media(min-width:901px) and (max-width:1200px) {
+  .hero-interest-stage .interest-map-launcher { grid-template-columns: minmax(0, 1fr) 96px; }
+  .hero-interest-stage .interest-map-graphic { width: 96px; }
+}
+@media(min-width:901px) and (max-width:1100px) {
+  .hero-interest-stage .interest-map-launcher { grid-template-columns: minmax(0, 1fr); }
+  .hero-interest-stage .interest-map-graphic { display: none; }
+  .hero-interest-stage .interest-map-actions { grid-template-columns: minmax(0, 1fr); }
+}
+@media(max-width:760px) {
+  .map-area-tabs { grid-template-columns: 1fr; }
+  .research-card.active .research-name { font-size: 18px; line-height: 1.4; }
+  .research-card.active .research-location { font-size: 13px; line-height: 1.5; }
+  .research-lead { font-size: 17px; }
+  .research-figures figure { padding: 8px; }
+  .research-inner { padding-left: 18px; padding-right: 18px; }
+}

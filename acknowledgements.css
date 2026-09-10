@@ -1,0 +1,36 @@
+/* A quiet, open acknowledgement at the end of the page. */
+.acknowledgements { --ack-media-height: clamp(154px, 17.8vw, 208px); margin: 12px 0 38px; padding-top: 32px; border-top: 1px solid #dce3e9; }
+.ack-thanks { margin: 0 auto 32px; color: #536779; font-size: 16px; line-height: 1.8; text-wrap: balance; }
+.ack-groups { display: grid; grid-template-columns: 1fr 1.06fr 1fr; gap: 30px; align-items: start; }
+.ack-group { min-width: 0; }
+.acknowledgements figure { margin: 0; min-width: 0; }
+.ack-people { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.ack-portrait { display: block; width: 100%; height: var(--ack-media-height); object-fit: cover; object-position: center top; border-radius: 3px; }
+.acknowledgements figcaption { margin-top: 12px; min-height: 48px; color: #2f435a; font-size: 15px; line-height: 1.5; }
+.acknowledgements figcaption span { white-space: nowrap; }
+.ack-team-media { height: var(--ack-media-height); display: grid; grid-template-rows: minmax(0, 1fr) 40px; gap: 8px; }
+.ack-team-photo { display: block; width: 100%; height: 100%; min-height: 0; object-fit: cover; object-position: center 76%; border-radius: 3px; }
+.ack-project-logos { display: flex; justify-content: center; align-items: center; gap: 0; }
+.ack-project-logos img { width: 110px; height: 40px; object-fit: contain; }
+.ack-affiliation { height: 60px; display: flex; align-items: center; justify-content: center; }
+.ack-affiliation img { display: block; width: 100%; height: auto; max-height: 60px; object-fit: contain; mix-blend-mode: multiply; }
+.ack-affiliation .ack-yale { width: 185px; }
+.ack-affiliation .ack-life-sciences { max-width: 300px; }
+.ack-copyright { margin: 0; font-size: 13px; }
+@media(max-width:1000px) and (min-width:761px) {
+  .ack-groups { gap: 20px; }
+  .ack-people { gap: 12px; }
+  .acknowledgements figcaption { font-size: 13px; }
+}
+@media(max-width:760px) {
+  .acknowledgements { --ack-media-height: clamp(170px, 51vw, 260px); padding-top: 28px; }
+  .ack-thanks { max-width: 400px; font-size: 15px; margin-bottom: 28px; }
+  .ack-groups { max-width: 440px; margin: 0 auto; grid-template-columns: 1fr; gap: 36px; }
+  .ack-people { gap: 24px; }
+  .ack-portrait { object-fit: contain; }
+  .acknowledgements figcaption { min-height: 24px; }
+  .ack-team-media { grid-template-rows: minmax(0, 1fr) 46px; gap: 10px; }
+  .ack-project-logos img { width: 130px; height: 46px; }
+  .ack-affiliation { margin-top: 10px; height: 50px; }
+  .ack-affiliation img { max-height: 50px; }
+}

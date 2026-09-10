@@ -1,0 +1,5 @@
+/* Compact presentation when the model is shown inside the interest map. */
+.embedded .masthead, .embedded .intro { display: none; }
+.embedded main { padding: 16px 18px 0; }
+.embedded .scope { display: none; }
+@media(max-width:760px) { .embedded main { padding: 10px; } }

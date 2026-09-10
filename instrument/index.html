@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Cage monitoring system · Yan Wang</title>
+  <meta name="description" content="An interactive proposed design for a cage-based temperature and activity monitoring system, with component inspection and a scripted signal demonstration.">
+  <meta name="theme-color" content="#163342">
+  <link rel="stylesheet" href="viewer.css">
+  <link rel="stylesheet" href="embed.css">
+  <script>if(new URLSearchParams(location.search).get('embed')==='1')document.documentElement.classList.add('embedded');</script>
+  <script type="importmap">{"imports":{"three":"./vendor/three.module.js","three/addons/":"./vendor/addons/"}}</script>
+</head>
+<body>
+<header class="masthead"><a href="../#funding" class="back">← Yan Wang</a><span class="wordmark">FIELD NOTES / ENGINEERING</span><span class="tag">Proposed design</span></header>
+<main>
+  <div class="intro"><div><p class="eyebrow">UNITREE FUNDING APPLICATION · SEPTEMBER 2026</p><h1>A closer look at the monitoring rig.</h1><p class="lede">Two cameras, ambient sensing, and a shared recording system. I am working toward a setup that can record these signals together, starting with an empty-cage test.</p></div><a class="text-link" href="design-notes.html">Design notes & sources ↗</a></div>
+  <section class="workbench" aria-label="Interactive instrument model">
+    <div class="viewport-column">
+      <div class="viewport" id="viewport" tabindex="0" aria-label="3D model. Drag to rotate, scroll or pinch to zoom. Use the view buttons for keyboard navigation.">
+        <img id="poster" class="poster" src="assets/hero.webp" alt="Proposed cage monitoring instrument with overhead cameras, external acquisition electronics and a separate UPS.">
+        <div id="loading" class="loading" role="status">Loading the assembly…</div>
+        <div class="viewport-top"><span id="scene-label">01 / MONITORING ASSEMBLY</span><span id="scale-label">Model units: mm</span></div>
+        <div class="orientation" aria-hidden="true"><span class="dot orange"></span> Thermal <span class="dot teal"></span> Activity</div>
+        <div class="zoom-tools" role="group" aria-label="Zoom"><button id="zoom-in" aria-label="Zoom in">+</button><button id="zoom-out" aria-label="Zoom out">−</button></div>
+        <div class="view-buttons" role="group" aria-label="Camera views"><button data-view="perspective" aria-pressed="true">Overview</button><button data-view="front" aria-pressed="false">Front</button><button data-view="top" aria-pressed="false">Top</button><button data-view="detail" aria-pressed="false">Close-up</button></div>
+      </div>
+      <div class="model-tools">
+        <label class="explode-control" for="explode">Assembly <input id="explode" type="range" min="0" max="100" value="0"><span>Exploded</span></label>
+        <div class="tool-toggles"><button id="lid-toggle" aria-pressed="false">Lift lid</button><button id="fov-toggle" aria-pressed="false">Camera fields</button><button id="coverage-toggle" aria-pressed="false">Sample coverage</button><button id="dimension-toggle" aria-pressed="false">Dimensions</button><button id="reset-view">Reset</button></div>
+      </div>
+      <p id="view-hint" class="view-hint">Drag to rotate · Scroll / pinch to zoom · Select a part to inspect it</p>
+    </div>
+    <aside class="component-panel" aria-label="Component details">
+      <div class="panel-heading"><span class="eyebrow">INSPECT THE DESIGN</span><span id="part-number">01 / 09</span></div>
+      <label for="component-select" class="sr-only">Choose a component</label>
+      <select id="component-select"></select>
+      <div class="component-copy" aria-live="polite"><p id="component-role" class="role"></p><h2 id="component-title"></h2><p id="component-description"></p><dl id="component-specs"></dl><p id="component-limit" class="component-limit"></p></div>
+      <div class="assembly-switch" role="group" aria-label="Assembly"><button id="main-assembly" aria-pressed="true">Monitoring rig</button><button id="calibration-assembly" aria-pressed="false">Calibration kit</button></div>
+      <p class="panel-footnote">A design visualization. Parts with published dimensions are modeled to those envelopes; mounting details and the overall arrangement are proposed.</p>
+    </aside>
+  </section>
+  <section class="replay-section" aria-labelledby="replay-title">
+    <div class="replay-heading"><div><p class="eyebrow">TRY A SCRIPTED SEQUENCE</p><h2 id="replay-title">What would the signals look like?</h2><p>This replay illustrates the planned display. It contains no recorded animal data and does not estimate core temperature or metabolic rate.</p></div><span class="simulation-tag">SIMULATED DATA</span></div>
+    <div class="replay-grid"><div class="trace-panel">
+      <div class="trace-top"><span>Scripted surface temperature <span class="muted">/ °C</span></span><strong id="state" aria-live="polite">NORMAL</strong></div>
+      <svg id="trace" viewBox="0 0 680 180" role="img" aria-label="Scripted surface temperature trace over 120 demonstration minutes"><g id="trace-grid"></g><path id="trace-path"/><path id="trace-progress"/><line id="trace-cursor" x1="45" x2="45" y1="18" y2="149"/><circle id="trace-dot" r="4" cx="45" cy="20"/></svg>
+      <div class="timeline"><button id="play" aria-pressed="false">Play replay</button><label for="time" class="sr-only">Replay time in demonstration minutes</label><input id="time" type="range" min="0" max="120" value="0" step="0.1"><output id="time-label" for="time">0:00 / 120 min</output></div>
+      <div class="fault-control"><label for="fault">Signal quality</label><select id="fault"><option value="clear">Clear view</option><option value="occlusion">Thermal view obstructed</option><option value="dropout">Camera stream unavailable</option></select></div>
+      <p id="signal-note">Illustrative phase labels follow the scripted sequence; they are not a validated classifier.</p>
+    </div><div class="readouts" aria-label="Current simulated values"><div><span>Surface temperature</span><strong id="surface">34.0 <small>°C</small></strong><em>Thermal camera</em></div><div><span>Activity index</span><strong id="activity">0.82</strong><em>Illustrative relative scale</em></div><div><span>Ambient temperature</span><strong id="ambient">22.0 <small>°C</small></strong><em>Outside the cage</em></div><div><span>Relative humidity</span><strong id="humidity">45 <small>%</small></strong><em>Ambient sensor</em></div></div></div>
+  </section>
+  <section class="scope"><div><span class="step">01</span><h3>Check the setup</h3><p>Use a sealed warm-water target to inspect coverage, grid obstruction, and timing before any biological recording.</p></div><div><span class="step">02</span><h3>Record together</h3><p>Keep surface temperature, movement, and ambient conditions on a shared timeline. Retain missing or obstructed frames as quality flags.</p></div><div><span class="step">03</span><h3>Compare with references</h3><p>Core temperature and metabolic measurements would come from independent equipment. Those comparisons are still planned.</p></div></section>
+  <footer><p>Yan Wang · Proposed monitoring system · No automatic actuation</p><div><a href="design-notes.html">Sources & assumptions</a><a href="assets/instrument.glb" download>Download 3D model</a><a href="assets/model-source.zip" download>Model source</a></div></footer>
+</main>
+<noscript><p class="no-script">The model requires JavaScript. The rendered image, component context, and <a href="design-notes.html">design notes</a> remain available.</p></noscript>
+<script type="module" src="viewer.js"></script>
+</body></html>
