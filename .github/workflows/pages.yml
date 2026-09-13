@@ -4,7 +4,7 @@ on:
     branches: [main]
   workflow_dispatch:
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 concurrency:
@@ -18,6 +18,25 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+      - name: Read the verified Yale release
+        uses: actions/checkout@v4
+        with:
+          repository: YanWang-whu/YanWang-whu.github.io
+          ref: c9f08a8f75ad7a27b0f8cfd1a304f05fa31ce780
+          path: _incoming
+          persist-credentials: false
+      - name: Update spatial atlas and project introduction
+        run: |
+          rsync -a --delete _incoming/spatial/ spatial/
+          cp _incoming/index.html index.html
+          rm -rf _incoming
+          git config user.name "YanWang-yale"
+          git config user.email "327588339+YanWang-yale@users.noreply.github.com"
+          git add index.html spatial
+          if ! git diff --cached --quiet; then
+            git commit -m "Update cellwise spatial atlas and QPLOT viewer"
+            git push origin HEAD:main
+          fi
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
