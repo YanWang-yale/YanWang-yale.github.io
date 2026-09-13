@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Spatial comparison · Methods and anatomy</title><link rel="stylesheet" href="viewer.css"><style>body{max-width:1000px;margin:auto}h1{margin:24px 0 16px}h2{margin:32px 0 12px}p,li{line-height:1.8}table{background:white}code{overflow-wrap:anywhere}.table-scroll{max-height:none}nav{display:flex;gap:20px;flex-wrap:wrap}</style></head><body>
+<nav><a href="./">← Mouse–marmoset atlas</a><a href="qplot.html">QPLOT example</a></nav>
+<h1>How I built the spatial comparison</h1>
+<p>The viewer brings together measured marker expression, RNA-based cell comparisons, and spatial anatomy. The default coloured overview shows 3,537 mouse cells from twelve author-defined types and 4,759 marmoset cells from their discovery-bank matches. The marker menus provide a separate way to select cells by expression.</p>
+<h2>Three coordinate views</h2>
+<div class="table-scroll"><table><thead><tr><th>View</th><th>Coordinates</th><th>What I use it for</th></tr></thead><tbody>
+<tr><td>47-section reconstruction</td><td>Original in-section positions, the existing registration transforms, and nominal section depth.</td><td>Comparing distributions across the sampled tissue. Separate registration segments and section gaps are retained.</td></tr>
+<tr><td>Atlas coordinates · mapped coverage</td><td>Released coordinates for 562,513 retained neurons, plus local interpolation for 487 neurons.</td><td>Viewing the mapped subset against atlas regions. Cells are sampled from this subset independently of the reconstruction display.</td></tr>
+<tr><td>Unregistered section coordinates</td><td>Original section XY positions and nominal section depth.</td><td>Checking the original section layout and the effect of registration.</td></tr>
+</tbody></table></div>
+<p>The selection rule stays the same when coordinates change. Counts can change because atlas coordinates cover a subset of the cells. Each species uses its own coordinate scale.</p>
+<h2>Cell selection and RNA correspondence</h2>
+<p>The RNA comparison uses 93,141 mouse neurons, 504,272 marmoset neurons, and 2,569 homologous genes, divided into discovery and validation banks of 1,278 and 1,291 genes. Marker genes are withheld from matching. Spatial predictions use RNA neighbours within each species and donor holdout checks. The evidence selector distinguishes these predictions from markers measured directly in the spatial panel.</p>
+<p>The twelve original mouse types were selected using nine markers: Adcyap1, Bdnf, Esr1, Gabre, Gal, Lepr, Ptger3, Samd3 and Sntg2. Each type had at least 20 neurons in each mouse. For each marker, types were ranked by the lower positive fraction across the two mice, using at least two raw counts as the positive threshold. Taking the top two types per marker and merging duplicates produced twelve types. <a href="type_selection.csv">Download the selection table</a>.</p>
+<p>The marmoset colours follow the top author-type match in the discovery bank. Five of the twelve top matches agree across both gene banks. Individual type descriptions show both results. In full-coverage views, up to 12,000 selected cells are drawn; the counter gives both the total selected and the number displayed.</p>
+<h2>Brain-region outlines</h2>
+<p>Region outlines follow the 150 µm RIKEN25/uDHBA voxel labels matched to the existing transforms. Released coordinate anchors define a piecewise linear mapping from section XY positions to atlas coordinates. Interpolation is accepted inside the anchor triangulation, within 0.15 mm of the nearest anchor, and with triangle edges no longer than 0.5 mm. A 0.075 mm sampling grid is used to trace the atlas boundaries.</p>
+<p>The reconstruction preserves separate contours and section gaps. Connecting lines are added only between adjacent, single-contour sections in the same registration segment. The atlas view shows voxel-region contours in three directions. A spatial holdout check gave a median section-wise 95th-percentile interpolation error of 0.00418 mm relative to the released coordinates. The atlas resolution remains 150 µm.</p>
+<p>POA, caudate, putamen, GPe, GPi and anterior cortical amygdala can be toggled separately. Anatomical labels are assigned independently of the candidate marker selections.</p>
+<h2>Expression checks of the regional labels</h2>
+<p>Nine of the 29 regional marker genes checked are present in the spatial panel: LHX6, PPP1R1B, DRD1, DRD2, TAC1, GAD2, SLC17A6, CALB1 and CALB2. The other twenty are recorded as unmeasured. <a href="region_marker_panel_coverage.csv">Panel coverage</a> · <a href="region_marker_summary.csv">Regional expression summary</a>.</p>
+<p>PPP1R1B-positive fractions are 96.2% in caudate and 96.9% in putamen, alongside DRD1/DRD2, TAC1 and GAD2 expression. In the POA-labelled cells, the corresponding fractions are 9.9% for PPP1R1B, 25.2% for SLC17A6 and 71.0% for GAD2. POA boundaries follow atlas labels; the available panel provides a regional expression check.</p>
+<p>GPe-labelled cells have 90.9% PPP1R1B positivity and a broadly striatal expression profile, which makes the original registration and neighbouring tissue worth examining further. GPe is labelled “atlas reference” in the viewer. GPe, GPi and anterior cortical amygdala outlines start switched off.</p>
+<h2>What is included in the POA view?</h2>
+<p>The current atlas-labelled POA subset contains 404 retained neurons: one in section 17, 145 in section 18 and 258 in section 20. Section 19 has no linked POA-labelled cells in this coordinate coverage. Its anatomical extent remains an open question in the available data.</p>
+<p>Within this subset, the twelve-type overview contains 24 cells. Measured ADCYAP1 and SLC17A6 double expression at two or more raw counts selects 48 cells; the corresponding RNA-predicted set selects zero. The previous viewer used a larger window based on convex hulls and an interpolated section-19 ellipse. This update uses atlas labels for the spatial filter and retains the full-coverage RNA predictions. <a href="model_counts.csv">Download counts for every model</a>.</p>
+<h2>Sources</h2>
+<ul>
+<li><a href="https://alleninstitute.github.io/CCF-MAP/descriptions/marmoset_ccf.html">Allen HMBA marmoset CCF documentation</a>: template and atlas coordinate context.</li>
+<li><a href="https://www.biorxiv.org/content/10.1101/2025.11.22.689869v2.full">Marmoset spatial cell atlas preprint</a>: spatial data and author-type framework.</li>
+<li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6482113/">Moffitt et al., Science (2018)</a>: mouse preoptic cell types, marker combinations and spatial organisation.</li>
+<li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10569717/">Krienen et al. (2023)</a>: marmoset whole-brain cell expression reference.</li>
+<li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11494440/">Saleem et al., Cerebral Cortex (2024)</a>: anatomical atlas construction and regional validation.</li>
+</ul>
+<footer>Yan Wang · Public-data analysis · September 2026</footer>
+</body></html>

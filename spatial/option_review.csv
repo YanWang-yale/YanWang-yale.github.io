@@ -1,0 +1,54 @@
+ID,Source,Action,Review
+ADCYAP1__Tan2016_VMPO,"Tan et al. 2016, Cell",merge_supported_marker_set,Merge identical marker definitions across papers. Retain RNA correspondence and spatial projection as an expression-defined set.
+BDNF__Tan2016_VMPO,"Tan et al. 2016, Cell",merge_supported_marker_set,Merge identical marker definitions across papers. Retain RNA correspondence and spatial projection as an expression-defined set.
+ADCYAP1__Hrvatin2020_avMLPA,"Hrvatin et al. 2020, Nature",merge_supported_marker_set,Merge identical marker definitions across papers. Retain RNA correspondence and spatial projection as an expression-defined set.
+ADCYAP1__Hrvatin2020_e5_anchor,"Hrvatin et al. 2020, Nature",archive_failed_validation,Independent NHP marker support below 3/4 donors. The two-marker proxy only samples part of the original e5/e10 definition.
+ADCYAP1__Hrvatin2020_e10_anchor,"Hrvatin et al. 2020, Nature",archive_failed_validation,Independent NHP marker support below 3/4 donors. The two-marker proxy only samples part of the original e5/e10 definition.
+PTGER3__Machado2025_MnPO,"Machado et al. 2025, Nature",archive_failed_validation,Independent NHP marker support below 3/4 donors.
+ADCYAP1__Machado2025_PACAP_comparison,"Machado et al. 2025, Nature",merge_supported_marker_set,Merge identical marker definitions across papers. Retain RNA correspondence and spatial projection as an expression-defined set.
+ADCYAP1__Roessler2026_avPOA,"Roessler et al. 2026, bioRxiv (preprint)",merge_supported_marker_set,Merge identical marker definitions across papers. Retain RNA correspondence and spatial projection as an expression-defined set.
+QRFP__Takahashi2020_Q,"Takahashi et al. 2020, Nature",archive_failed_validation,Mouse identity gate failed.
+QRFP__Takahashi2022_Q_light,"Takahashi et al. 2022, Cell Reports Methods",archive_failed_validation,Mouse identity gate failed.
+QRFP__Lee2025_Q,"Lee et al. 2025, Nature Communications",archive_failed_validation,Mouse identity gate failed.
+QRFP__Hirano2026_Q,"Hirano et al. 2026, PLOS Biology",archive_failed_validation,Mouse identity gate failed.
+TRPM2__Song2016_POA,"Song et al. 2016, Science",archive_failed_validation,Mouse identity gate failed.
+TRPM2__Yamaguchi2023_POA,"Yamaguchi et al. 2023, Current Biology",archive_failed_validation,Mouse identity gate failed.
+TRPM2__Yang2023_ultrasound,"Yang et al. 2023, Nature Metabolism",archive_failed_validation,Mouse identity gate failed.
+TRPM2__Kamm2021_synaptic,"Kamm et al. 2021, Neuron",archive_failed_validation,Mouse identity gate failed.
+OPN5__Zhang2020_POA,"Zhang et al. 2020, Nature",archive_failed_validation,Independent NHP marker support below 3/4 donors.
+OPN5__Gaitonde2023_Gnas,"Gaitonde et al. 2023, PLOS ONE",archive_failed_validation,Independent NHP marker support below 3/4 donors.
+LEPR__Yu2016_POA,"Yu et al. 2016, Journal of Neuroscience",archive_failed_validation,Independent NHP marker support below 3/4 donors.
+LEPR__Yu2018_receptor,"Yu et al. 2018, eLife",archive_failed_validation,Independent NHP marker support below 3/4 donors.
+LEPR__Ambroziak2025_VMPO,"Ambroziak et al. 2025, Nature Neuroscience",archive_failed_validation,Independent NHP marker support below 3/4 donors.
+LEPR__Roessler2026_avPOA_LEPR,"Roessler et al. 2026, bioRxiv (preprint)",archive_failed_validation,Independent NHP marker support below 3/4 donors.
+ESR1__Zhang2020_MPA,"Zhang et al. 2020, Nature Communications",archive_failed_validation,Independent NHP marker support below 3/4 donors.
+GAL__Kroeger2018_VLPO,"Kroeger et al. 2018, Nature Communications",archive_failed_validation,RNA-to-spatial donor validation failed.
+GAL__Ma2019_LPO,"Ma et al. 2019, Current Biology",archive_failed_validation,RNA-to-spatial donor validation failed.
+GABRE__Wang2024_awake,"Wang et al. 2024, IJMS",archive_failed_validation,Independent NHP marker support below 3/4 donors.
+GABRE__Wang2024_anesthesia,"Wang et al. 2024, IJMS",archive_failed_validation,Independent NHP marker support below 3/4 donors.
+SAMD3__Martinez2026_hamster,"Martinez et al. 2026, bioRxiv (preprint)",merge_expression_reference,Merge identical marker definitions across papers. Retain RNA correspondence and spatial projection as an expression-defined set. SAMD3 expression is broader than enhancer-targeted access.
+SAMD3__Martinez2026_mouse,"Martinez et al. 2026, bioRxiv (preprint)",merge_expression_reference,Merge identical marker definitions across papers. Retain RNA correspondence and spatial projection as an expression-defined set. SAMD3 expression is broader than enhancer-targeted access.
+NOS1__Harding2018_warm,"Harding et al. 2018, Current Biology",archive_failed_validation,Independent NHP marker support below 3/4 donors.
+NOS1__Harding2021_sleep,"Harding et al. 2021, Frontiers in Neuroscience",archive_failed_validation,Mouse identity gate failed.
+BDNF__Cai2026_LPO,"Cai et al. 2026, iScience",merge_supported_marker_set,Merge identical marker definitions across papers. Retain RNA correspondence and spatial projection as an expression-defined set.
+ADCYAP1__Tan2016_VMPO__combination,"Tan et al. 2016, Cell",merge_supported_marker_set,Merge identical marker definitions across papers. Retain RNA correspondence and spatial projection as an expression-defined set.
+QRFP__Takahashi2020_Q__combination,"Takahashi et al. 2020, Nature",archive_failed_validation,Mouse identity gate failed.
+OPN5__Zhang2020_POA__combination,"Zhang et al. 2020, Nature",archive_failed_validation,Independent NHP marker support below 3/4 donors.
+ADCYAP1__Hrvatin2020_avMLPA__combination,"Hrvatin et al. 2020, Nature",merge_supported_marker_set,Merge identical marker definitions across papers. Retain RNA correspondence and spatial projection as an expression-defined set.
+TRPM2__Kamm2021_synaptic__combination,"Kamm et al. 2021, Neuron",merge_expression_reference,Merge identical marker definitions across papers. Retain RNA correspondence and spatial projection as an expression-defined set. GABAergic temperature-sensing circuit reference.
+PTGER3__Machado2025_MnPO__combination,"Machado et al. 2025, Nature",archive_failed_validation,Independent NHP marker support below 3/4 donors.
+ST0399,Original author supertype ST0399,archive_discordant_match,Discovery and validation nominate different types; the previous union obscured disagreement.
+ST0404,Original author supertype ST0404,archive_discordant_match,Discovery and validation nominate different types; the previous union obscured disagreement.
+ST0411,Original author supertype ST0411,archive_discordant_match,Discovery and validation nominate different types; the previous union obscured disagreement.
+ST0482,Original author supertype ST0482,retain_type_reference,Both gene banks nominate the same author type.
+ST0483,Original author supertype ST0483,archive_discordant_match,Discovery and validation nominate different types; the previous union obscured disagreement.
+ST0484,Original author supertype ST0484,retain_type_reference,Both gene banks nominate the same author type.
+ST0519,Original author supertype ST0519,archive_discordant_match,Discovery and validation nominate different types; the previous union obscured disagreement.
+ST0520,Original author supertype ST0520,archive_discordant_match,Discovery and validation nominate different types; the previous union obscured disagreement.
+ST0521,Original author supertype ST0521,retain_type_reference,Both gene banks nominate the same author type.
+ST0522,Original author supertype ST0522,retain_type_reference,Both gene banks nominate the same author type.
+ST0546,Original author supertype ST0546,retain_type_reference,Both gene banks nominate the same author type.
+ST0548,Original author supertype ST0548,archive_discordant_match,Discovery and validation nominate different types; the previous union obscured disagreement.
+USC20,"Yang et al. 2023, Nature Metabolism · USC20",archive_response_mapping,One pooled library per condition; NHP spatial validation fails. Keep descriptive response tables and mouse localization in the analysis archive.
+USC13,"Yang et al. 2023, Nature Metabolism · USC13",archive_response_mapping,One pooled library per condition; NHP spatial validation fails. Keep descriptive response tables and mouse localization in the analysis archive.
+USC01,"Yang et al. 2023, Nature Metabolism · USC01",archive_response_mapping,One pooled library per condition; NHP spatial validation fails. Keep descriptive response tables and mouse localization in the analysis archive.
