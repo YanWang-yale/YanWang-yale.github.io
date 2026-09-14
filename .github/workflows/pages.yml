@@ -4,7 +4,7 @@ on:
     branches: [main]
   workflow_dispatch:
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 concurrency:
@@ -18,6 +18,16 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+      - name: Import verified analytics release
+        run: |
+          git fetch https://github.com/YanWang-whu/YanWang-whu.github.io.git f02203fddd782aa2774155368a6606736f4c13ca
+          git checkout f02203fddd782aa2774155368a6606736f4c13ca -- analytics.js index.html instrument/index.html spatial/index.html spatial/methods.html spatial/qplot.html
+          git config user.name "YanWang-yale"
+          git config user.email "327588339+YanWang-yale@users.noreply.github.com"
+          if ! git diff --cached --quiet; then
+            git commit -m "Add private aggregate visitor and model usage analytics"
+            git push origin HEAD:main
+          fi
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
