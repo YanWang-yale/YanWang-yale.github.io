@@ -4079,3 +4079,14 @@ footer.is-visible {
 .publication-affiliations li { padding-left: 4px; margin: 8px 0; }
 .text-link { display: inline-block; margin-top: 12px; font-weight: 600; }
 @media (max-width: 640px) { .publication-card { padding: 22px 20px; } .publication-card h3 { font-size: 19px; } .project-summary { padding: 0 20px 20px; } }
+
+/* Three academic metrics share a row when the card has room. */
+.academic-stats.stats-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(18px, 2.5vw, 34px); }
+.academic-stats .stat-block { min-width: 0; display: flex; flex-direction: column; }
+.academic-stats .stat-label { font-size: clamp(14px, 1.5vw, 18px); letter-spacing: .02em; line-height: 1.5; }
+.academic-stats .progress-track { margin-top: auto; }
+.major-gpa-fill { --target-width: 99.25%; background: linear-gradient(90deg, #68b5a3, #438f7e); }
+@media (max-width: 640px) {
+  .academic-stats.stats-grid { grid-template-columns: 1fr; gap: 22px; }
+  .academic-stats .stat-label { font-size: 16px; }
+}
