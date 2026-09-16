@@ -514,12 +514,12 @@
         </div>
       </div>
 
-      <div class="research-card" id="spatial-research">
-        <button type="button" class="research-header" id="spatial-research-heading" aria-expanded="false" aria-controls="spatial-research-content" onclick="toggleActivity(this)">
+      <div class="research-card active" id="spatial-research">
+        <button type="button" class="research-header" id="spatial-research-heading" aria-expanded="true" aria-controls="spatial-research-content" onclick="toggleActivity(this)">
           <div class="research-left"><span class="research-name">Cross-species spatial transcriptomics: searching for candidate hypometabolism neurons</span></div>
           <div class="research-right"><span class="research-arrow" aria-hidden="true">&#9662;</span></div>
         </button>
-        <div class="research-content" id="spatial-research-content" role="region" aria-labelledby="spatial-research-heading" tabindex="0" inert><div class="research-inner">
+        <div class="research-content" id="spatial-research-content" role="region" aria-labelledby="spatial-research-heading" tabindex="0"><div class="research-inner">
           <p class="research-text">Induced hypometabolism has possible applications in organ protection and long-duration spaceflight. I started this project out of personal interest, using published work and public single-cell and spatial transcriptomic data. Several published studies have induced hypometabolism or torpor-like states in mice through different approaches such as ultrasound stimulation and chemogenetic manipulation. These studies use somewhat different markers to identify the relevant preoptic neurons, which made me wonder how much the populations they target actually overlap. I compared individual mouse and marmoset neurons using shared genes, then examined marker expression and predicted populations in the spatial datasets. The viewer brings together these comparisons, brain-region outlines, and three ways of viewing the marmoset coordinates. I also made a small QPLOT example to look at how two markers overlap in the mouse POA.</p>
           <div class="spatial-showcase">
  <div class="spatial-preview"><img src="spatial/preview.jpg" width="1200" height="810" loading="lazy" decoding="async" alt="Side-by-side spatial views of mouse preoptic neurons and candidate marmoset counterparts."><div class="spatial-caption"><p class="spatial-eyebrow">Mouse × marmoset · Public spatial data</p><h4>Explore the spatial comparison</h4><p>Compare marker expression and RNA-based predictions, explore the brain regions, and switch between three marmoset coordinate views.</p><div class="spatial-actions"><button type="button" data-load-spatial>Load spatial models</button><a href="spatial/" target="_blank" rel="noopener">Open full viewer ↗</a></div></div></div>
