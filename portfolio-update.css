@@ -54,3 +54,25 @@ body.poster-view-open { overflow: hidden; }
   .poster-viewport { padding: 8px; }
   .poster-preview-cue { right: 6px; bottom: 6px; padding: 5px 9px; font-size: 12px; }
 }
+
+/* Additional STEM coursework, opened on demand alongside the core courses. */
+.additional-coursework { margin-top: 18px; border: 1px solid #dce4ed; border-radius: 12px; background: #f8fafc; }
+.additional-coursework summary { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 15px 18px; color: #334f74; font-size: 16px; font-weight: 600; cursor: pointer; list-style: none; }
+.additional-coursework summary::-webkit-details-marker { display: none; }
+.additional-coursework summary:focus-visible { outline: 3px solid #5a897e; outline-offset: 3px; border-radius: 12px; }
+.coursework-toggle { flex: 0 0 auto; font-size: 22px; line-height: 1; font-weight: 400; }
+.additional-coursework[open] summary { border-bottom: 1px solid #dce4ed; }
+.additional-coursework[open] .coursework-toggle { transform: rotate(45deg); }
+.additional-coursework-body { padding: 16px; }
+.coursework-scale { margin: 0 0 13px; color: #66788d; font-size: 13px; line-height: 1.5; }
+.additional-coursework .stem-course-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.additional-coursework .course-chip { gap: 16px; padding: 12px 14px; border-radius: 10px; min-width: 0; }
+.additional-coursework .stem-course-name { min-width: 0; color: #33415c; font-weight: 600; line-height: 1.5; }
+.additional-coursework .course-chip > span:last-child { flex: 0 0 auto; }
+@media(max-width:640px) {
+  .additional-coursework .stem-course-grid { grid-template-columns: 1fr; }
+  .additional-coursework summary { padding: 14px; }
+  .additional-coursework-body { padding: 12px; }
+  .awards-card .award-main { display: block; }
+  .awards-card .award-date { display: block; margin-top: 3px; }
+}
