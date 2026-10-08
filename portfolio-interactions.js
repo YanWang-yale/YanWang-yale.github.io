@@ -79,5 +79,18 @@
     document.querySelectorAll('header, .research-header').forEach(element => observer.observe(element));
   }
   addEventListener('hashchange', revealLinkedResearch);
-  document.addEventListener('DOMContentLoaded', revealLinkedResearch);
+  document.addEventListener('DOMContentLoaded', () => {
+    // Keep INS-1 folded on arrival even if the saved URL points to it.
+    if (location.hash !== '#ins1-research') revealLinkedResearch();
+  });
+  document.querySelectorAll('a[href="#ins1-research"]').forEach(link => {
+    link.addEventListener('click', event => {
+      if (event.defaultPrevented || event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+      // A click on the current fragment does not dispatch hashchange.
+      if (location.hash === '#ins1-research') {
+        const card = document.getElementById('ins1-research');
+        if (card) requestAnimationFrame(() => openResearch(card));
+      }
+    });
+  });
 })();
