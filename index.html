@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="acknowledgements.css?v=20260909">
   <link rel="stylesheet" href="spatial-embed.css?v=20260910">
 <script src="analytics.js?v=20260913" defer></script>
+<link rel="stylesheet" href="portfolio-update.css?v=20261008">
 </head>
 <body>
 
@@ -56,16 +57,19 @@
       <span class="interest-map-eyebrow">Research Direction</span>
       <h3>What Drives Me</h3>
       <p>My previous research spans <strong>molecular biology</strong>, <strong><em>C. elegans</em> neuroscience</strong>, and <strong>synthetic biology</strong>. I have been drawn to the life sciences since I was young, from understanding the basic principles behind biological functions, behavior, and cognition to exploring future technologies such as deliberately changing metabolic states. I believe research in the life sciences, including molecular biology, neuroscience, and translational medicine, can help us understand how life works and turn that knowledge into new ways to extend healthy life, support space exploration, and treat disease. I want to take part in this effort to explain the nature of life and help shape our future.</p>
-      <div class="tag-list">
-        <span class="tag">Molecular Biology</span>
-        <span class="tag">Translational Medicine</span>
-        <span class="tag"><em>C. elegans</em></span>
-        <span class="tag">Parkinson's Disease</span>
-        <span class="tag">Neuroscience</span>
-        <span class="tag">Torpor/Hibernation</span>
-        <span class="tag">Interdisciplinary Research</span>
-        <span class="tag">Higher Cognitive Functions</span>
-      </div>
+      <div class="interest-tag-block">
+  <p class="interest-tag-hint"><span aria-hidden="true">ⓘ</span> Hover or tap a topic to read why it interests me.</p>
+  <div class="tag-list" aria-label="My research interests">
+    <button type="button" class="tag interest-tag" data-interest-title="Molecular Biology" data-interest-note="I like working backwards from a behavior or phenotype to the molecules behind it. It gives me a concrete starting point for understanding a phenomenon that first caught my attention." aria-expanded="false" aria-controls="interest-note-popover">Molecular Biology<span class="interest-tag-icon" aria-hidden="true">+</span></button>
+    <button type="button" class="tag interest-tag" data-interest-title="Translational Medicine" data-interest-note="If something we discover can improve health or help people do things that once seemed impossible, I would find that enormously rewarding. I want my research to contribute to that future." aria-expanded="false" aria-controls="interest-note-popover">Translational Medicine<span class="interest-tag-icon" aria-hidden="true">+</span></button>
+    <button type="button" class="tag interest-tag" data-interest-title="C. elegans" data-interest-note="This tiny animal has more than enough to keep me curious: RNA processing, differences in how neurons age, and cells finding their way through a body. I enjoy returning to it with a new experiment or a question from my own work." aria-expanded="false" aria-controls="interest-note-popover"><em>C. elegans</em><span class="interest-tag-icon" aria-hidden="true">+</span></button>
+    <button type="button" class="tag interest-tag" data-interest-title="Parkinson&#x27;s Disease" data-interest-note="Working at Yale has drawn me into this difficult field. I keep coming back to how a mostly sporadic disease can arise through so many routes, and how to choose a model that captures the mechanism I want to study." aria-expanded="false" aria-controls="interest-note-popover">Parkinson&#x27;s Disease<span class="interest-tag-icon" aria-hidden="true">+</span></button>
+    <button type="button" class="tag interest-tag" data-interest-title="Neuroscience" data-interest-note="I often find myself wondering how consciousness arises, and how the brain gives shape to behavior and thought. Trying to understand our own existence makes me want to keep asking questions outside what I already know." aria-expanded="false" aria-controls="interest-note-popover">Neuroscience<span class="interest-tag-icon" aria-hidden="true">+</span></button>
+    <button type="button" class="tag interest-tag" data-interest-title="Non-model Animals" data-interest-note="I want to study animals beyond the usual laboratory models. Species adapted to unusual environments may show us possibilities we would miss by studying one familiar organism. I think there is a great deal left to learn from what evolution has already tried." aria-expanded="false" aria-controls="interest-note-popover">Non-model Animals<span class="interest-tag-icon" aria-hidden="true">+</span></button>
+    <button type="button" class="tag interest-tag" data-interest-title="Torpor / Hibernation" data-interest-note="This is where science fiction meets questions I can begin to study: how can a nervous system change metabolism so profoundly, and could that help protect organs or make long space journeys possible? That combination keeps pulling me back." aria-expanded="false" aria-controls="interest-note-popover">Torpor / Hibernation<span class="interest-tag-icon" aria-hidden="true">+</span></button>
+    <button type="button" class="tag interest-tag" data-interest-title="Higher Cognitive Functions" data-interest-note="Questions from everyday life keep pulling me toward cognition. Why did one bad meal make me avoid coriander for years? How do I hold a verification code in mind for a few seconds? Why can a dream put old friends in a place they have never been? I want to understand what the brain is doing in these moments." aria-expanded="false" aria-controls="interest-note-popover">Higher Cognitive Functions<span class="interest-tag-icon" aria-hidden="true">+</span></button>
+  </div>
+</div>
       <div class="broad-actions">
         <a href="#research" class="btn-primary">Explore My Research</a>
         <a href="#life" class="btn-secondary">See My Life Moments</a>
@@ -201,12 +205,36 @@
         </button>
         <div class="research-content" id="scherzer-research-content" role="region" aria-labelledby="scherzer-research-heading" tabindex="0" inert>
           <div class="research-inner">
-<div class="research-section"><div class="research-subtitle">Background</div>
-<p class="research-text">The Scherzer Lab leads the Yale Harvard Biomarkers Study, one of the largest longitudinal biobanks for Parkinson’s disease. Analyses by our computational team pointed to PM20D1 and PM20D1-AS1 as candidates for further study. PM20D1 is a secreted N-acyl amino acid synthase/hydrolase; PM20D1-AS1 is a long noncoding RNA. We use molecular biology, neuroscience approaches, and human induced pluripotent stem cell (hiPSC) models to investigate their roles in Parkinson’s disease.</p></div>
-<div class="research-section"><div class="research-subtitle">What I am doing</div>
-<p class="research-text">We are using antisense oligonucleotides (ASOs) and gene-editing approaches to test how PM20D1 affects mitochondrial function and the cellular redox environment. For PM20D1-AS1, we are investigating its effects on PM20D1 expression, where it is located in the cell, and which other molecules it may interact with.</p>
-<p class="research-text">Since arriving at Yale, I have also taught myself sequencing-data analysis alongside my lab work. I compared 22 annotated PM20D1-AS1 transcripts in public datasets. My preliminary analyses suggest higher relative proportions of a few transcripts in astrocytes and oligodendrocytes from people with Parkinson’s disease. I am checking how reliably the data distinguish these transcripts and whether the patterns hold up in further analyses. These observations may help us choose which transcripts to study experimentally and ask more specific questions about this RNA’s possible role in disease.</p></div>
-<p class="research-text research-update">I have only recently joined the lab, so I will keep this section updated as the project develops.</p>
+<p class="research-lead"><strong>I entered this new field by writing a perspective article, then learned to connect wet-lab experiments with computational analyses I taught myself.</strong></p>
+<div class="research-section">
+  <div class="research-subtitle">Starting with the literature</div>
+  <p class="research-text">Before I arrived at Yale, my mentor invited me to write a perspective article on mitochondrial dysfunction and α-synuclein pathology in Parkinson’s disease. I spent the months before joining the lab reading the literature and working out how these two processes could reinforce each other. I developed the argument around this bidirectional loop and the treatment opportunities it raises. We submitted the manuscript to <em>Frontiers in Molecular Neuroscience</em> with me as first author, and it is now under review.</p>
+</div>
+<div class="research-section">
+  <div class="research-subtitle">Bringing those questions into the lab</div>
+  <p class="research-text">That reading gave me a much firmer starting point when I joined the Scherzer Lab. Building on our computational team’s single-cell genetic mapping work, we are studying PM20D1 and the long noncoding RNA PM20D1-AS1 at a Parkinson’s disease risk locus. PM20D1 is a secreted N-acyl amino acid synthase/hydrolase. Using human induced pluripotent stem cells (hiPSCs) and derived neurons, I am investigating where these RNAs are located, how reducing their expression changes the cell, and which molecular partners could connect them to disease. Our experiments include RNA fractionation, qPCR, antisense oligonucleotide (ASO) treatment, and RNA sequencing.</p>
+</div>
+<div class="research-section">
+  <div class="research-subtitle">Learning to analyze the data myself</div>
+  <p class="research-text">Alongside the experiments, I taught myself sequencing-data analysis so I could follow questions from a bench result back into human brain datasets. I examined three associated variants—rs9438393, rs1772143, and rs823080—and found that their linkage disequilibrium differed between populations. Two sequence-based models pointed to rs9438393 as the strongest candidate for changing local splicing. Its G allele increased predicted donor strength; in human brain neurons, it was also associated with a lower unspliced fraction at the same boundary. Looking at spliced and unspliced reads together led me to ask how local RNA processing affects the amount of PM20D1-AS1 that remains in the cell.</p>
+  <p class="research-text">We detected exon-junction-containing PM20D1-AS1 RNA in chromatin-associated fractions of hiPSCs. In derived cortical neurons, ASO treatment reduced its abundance by about <strong>80%</strong>. Using stringent selection criteria, our analysis identified <strong>168 responsive genes</strong>, including 148 with lower expression after treatment. <em>SNCA</em> and <em>SCD</em> were among them, and synaptic functions were enriched in the gene set. Sequence-based RNA–DNA triplex scores were higher than in both unrestricted and sequence-feature-matched random gene sets. I am now using these results to decide which RNA interactions to examine next and how to connect the expression changes to α-synuclein biology and lipid homeostasis.</p>
+</div>
+<div class="research-workflow" aria-label="How my experiments and analyses connect">
+  <div class="workflow-column">
+    <span class="workflow-label">Wet lab</span>
+    <h4>PM20D1 / PM20D1-AS1</h4>
+    <ul><li>Subcellular RNA fractionation and qPCR</li><li>ASO knockdown and RNA sequencing</li><li>Cellular and mitochondrial functional assays</li></ul>
+    <p class="workflow-next">Next experiments: RNAscope and ChIRP with collaborators</p>
+  </div>
+  <div class="workflow-column">
+    <span class="workflow-label">Dry lab</span>
+    <h4>PM20D1-AS1</h4>
+    <ul><li>Genotypes, linkage disequilibrium, and splicing</li><li>Brain RNA expression and neuronal responses</li><li>RNA–DNA interaction predictions</li></ul>
+    <p class="workflow-next">Using the results to choose the next experiment</p>
+  </div>
+</div>
+<p class="research-text research-update">These are current results from an ongoing project. I will update this account as we work through the next experiments.</p>
+
 </div>
         </div>
       </div>
@@ -293,7 +321,10 @@
                 More importantly, I learned to let results reshape the question. What began as a behavioral phenotype became a progressively testable model linking <strong>distributed peptide release, sensory-range tuning, downstream circuit state, and a candidate receptor</strong>. This process taught me how to integrate incomplete observations into a mechanistic framework that can be challenged by the next experiment.
               </p>
             </div>
-          <div class="research-figures" aria-label="Project figures"><figure><a href="research-images/ins1-working-model.png" target="_blank" rel="noopener" aria-label="Open full-size figure: Working model of INS-1 signaling in the ASER–AIY circuit. Dashed pathways and question marks indicate hypotheses."><img src="research-images/ins1-working-model.png" width="2124" height="1059" loading="lazy" decoding="async" alt="Working model of INS-1 signaling in the ASER–AIY circuit. Dashed pathways and question marks indicate hypotheses."></a><figcaption>Working model of INS-1 signaling in the ASER–AIY circuit. Dashed pathways and question marks indicate hypotheses. <span>Open image for a closer look ↗</span></figcaption></figure><figure><a href="research-images/ins1-behavior-and-model.png" target="_blank" rel="noopener" aria-label="Open full-size figure: Ethanol diffusion modeling, behavioral assays, and a working model of INS-1 signaling."><img src="research-images/ins1-behavior-and-model.png" width="1962" height="808" loading="lazy" decoding="async" alt="Ethanol diffusion modeling, behavioral assays, and a working model of INS-1 signaling."></a><figcaption>Ethanol diffusion modeling, behavioral assays, and a working model of INS-1 signaling. <span>Open image for a closer look ↗</span></figcaption></figure><figure><a href="research-images/ins1-calcium-responses.png" target="_blank" rel="noopener" aria-label="Open full-size figure: Calcium responses in ASER and AIY, with a proposed circuit model."><img src="research-images/ins1-calcium-responses.png" width="1930" height="864" loading="lazy" decoding="async" alt="Calcium responses in ASER and AIY, with a proposed circuit model."></a><figcaption>Calcium responses in ASER and AIY, with a proposed circuit model. <span>Open image for a closer look ↗</span></figcaption></figure></div></div>
+          <div class="research-figures ins1-poster-figure"><figure><button type="button" class="poster-preview" data-open-poster aria-haspopup="dialog" aria-controls="ins1-poster-dialog" aria-label="Enlarge the SfN 2026 INS-1 poster">
+  <img src="sfn2026-ins1-preview.webp" width="1600" height="1200" loading="lazy" decoding="async" alt="SfN 2026 INS-1 poster showing behavioral assays, neuron-specific perturbations, calcium imaging, and candidate receptor screens.">
+  <span class="poster-preview-cue">Enlarge poster <span aria-hidden="true">↗</span></span>
+</button><figcaption>My SfN 2026 conference poster. Click the image to enlarge it, then zoom in to read the figures.</figcaption></figure></div></div>
         </div>
       </div>
 
@@ -556,6 +587,10 @@
         <p class="publication-authors"><strong>Wang, Y.</strong>, Zhang, J., Huang, X., Ruan, Y., &amp; Yu, Y.</p>
         <p class="publication-venue">Abstract accepted for <em>Neuroscience 2026</em>, Society for Neuroscience.</p>
         <a class="text-link" href="#ins1-research">About the project <span aria-hidden="true">&#8599;</span></a>
+        <details class="publication-poster"><summary>View conference poster <span aria-hidden="true">+</span></summary><div class="publication-poster-body"><button type="button" class="poster-preview" data-open-poster aria-haspopup="dialog" aria-controls="ins1-poster-dialog" aria-label="Enlarge the SfN 2026 INS-1 poster">
+  <img src="sfn2026-ins1-preview.webp" width="1600" height="1200" loading="lazy" decoding="async" alt="SfN 2026 INS-1 poster showing behavioral assays, neuron-specific perturbations, calcium imaging, and candidate receptor screens.">
+  <span class="poster-preview-cue">Enlarge poster <span aria-hidden="true">↗</span></span>
+</button><p>Click the poster to enlarge it and read the figures.</p></div></details>
       </article>
     </div>
   </div>
@@ -730,24 +765,31 @@
 
     <div class="card awards-card">
 <div class="award-row">
+  <div class="award-main">
+    <span class="award-title"><span class="award-number">1.</span> <strong>Baosteel Outstanding Student Scholarship</strong></span>
+    <span class="award-date">Oct. 2026</span>
+  </div>
+  <div class="award-desc"><strong>RMB 20,000 scholarship.</strong> Awarded to the College of Life Sciences’ top student; one recipient.</div>
+</div>
+<div class="award-row">
         <div class="award-main">
-          <span class="award-title"><span class="award-number">1.</span> <strong>Gold Medal</strong>, International Genetically Engineered Machine (iGEM) Competition</span>
+          <span class="award-title"><span class="award-number">2.</span> <strong>Gold Medal</strong>, International Genetically Engineered Machine (iGEM) Competition</span>
           <span class="award-date">Nov. 2025</span>
         </div>
         <div class="award-desc">
           See <strong>LOGIC</strong> in Research section. As the <strong>prototype designer</strong>, I proposed the core concept and system architecture, and served as a <strong>core member</strong> responsible for wet-lab experiments, data analysis, and final presentation.
         </div>
       </div>
-<div class="award-row"><div class="award-main"><span class="award-title"><span class="award-number">2.</span> <strong>Gold Prize</strong>, Regular Track, SynBio (International Competition)</span><span class="award-date">2025 &amp; 2026</span></div><div class="award-desc">
+<div class="award-row"><div class="award-main"><span class="award-title"><span class="award-number">3.</span> <strong>Gold Prize</strong>, Regular Track, SynBio (International Competition)</span><span class="award-date">2025 &amp; 2026</span></div><div class="award-desc">
           An international synthetic biology competition organized by the <strong>Chinese Society of Biotechnology</strong>. Participated as a <strong>core member</strong> in the project “Dynamic Industrial Factory with Functional Elongation and Regeneration.”
         </div></div>
-<div class="award-row"><div class="award-main"><span class="award-title"><span class="award-number">3.</span> <strong>Gold Prize</strong>, Synthetic Cell Track, SynBio Challenges · <strong>Team Captain</strong></span><span class="award-date">Aug. 2026</span></div></div>
-<div class="award-row"><div class="award-main"><span class="award-title"><span class="award-number">4.</span> <strong>Gold Prize</strong>, Protein Design Track, SynBio Challenges · <strong>Team Captain</strong></span><span class="award-date">Aug. 2026</span></div></div>
-<div class="award-row"><div class="award-main"><span class="award-title"><span class="award-number">5.</span> <strong>Gold Prize</strong>, Bacterial Game Track, SynBio Challenges · <strong>Team Captain</strong></span><span class="award-date">Aug. 2026</span></div></div>
-<div class="award-row"><div class="award-main"><span class="award-title"><span class="award-number">6.</span> Hongyi Honors College’s Annual <strong>Top Ten</strong> Student Innovators Award</span><span class="award-date">Sep. 2026</span></div></div>
+<div class="award-row"><div class="award-main"><span class="award-title"><span class="award-number">4.</span> <strong>Gold Prize</strong>, Synthetic Cell Track, SynBio Challenges · <strong>Team Captain</strong></span><span class="award-date">Aug. 2026</span></div></div>
+<div class="award-row"><div class="award-main"><span class="award-title"><span class="award-number">5.</span> <strong>Gold Prize</strong>, Protein Design Track, SynBio Challenges · <strong>Team Captain</strong></span><span class="award-date">Aug. 2026</span></div></div>
+<div class="award-row"><div class="award-main"><span class="award-title"><span class="award-number">6.</span> <strong>Gold Prize</strong>, Bacterial Game Track, SynBio Challenges · <strong>Team Captain</strong></span><span class="award-date">Aug. 2026</span></div></div>
+<div class="award-row"><div class="award-main"><span class="award-title"><span class="award-number">7.</span> Hongyi Honors College’s Annual <strong>Top Ten</strong> Student Innovators Award</span><span class="award-date">Sep. 2026</span></div></div>
 <div class="award-row">
         <div class="award-main">
-          <span class="award-title"><span class="award-number">7.</span>  Westlake University <strong>Rising Star Award</strong></span>
+          <span class="award-title"><span class="award-number">8.</span>  Westlake University <strong>Rising Star Award</strong></span>
           <span class="award-date">Aug. 2026</span>
         </div>
         <div class="award-desc">
@@ -756,7 +798,7 @@
       </div>
 <div class="award-row">
         <div class="award-main">
-          <span class="award-title"><span class="award-number">8.</span>  Liu Daoyu Creative Learning Scholarship</span>
+          <span class="award-title"><span class="award-number">9.</span>  Liu Daoyu Creative Learning Scholarship</span>
           <span class="award-date">Jan. 2026</span>
         </div>
         <div class="award-desc">
@@ -765,31 +807,31 @@
       </div>
 <div class="award-row">
         <div class="award-main">
-          <span class="award-title"><span class="award-number">9.</span>  Hongyi Honors College’s Annual <strong>Top Ten</strong> Scientific and Technological Advances Award</span>
+          <span class="award-title"><span class="award-number">10.</span>  Hongyi Honors College’s Annual <strong>Top Ten</strong> Scientific and Technological Advances Award</span>
           <span class="award-date">Oct. 2025</span>
         </div>
       </div>
 <div class="award-row">
         <div class="award-main">
-          <span class="award-title"><span class="award-number">10.</span>  First-Class Outstanding Freshman Scholarship</span>
+          <span class="award-title"><span class="award-number">11.</span>  First-Class Outstanding Freshman Scholarship</span>
           <span class="award-date">Sep. 2023</span>
         </div>
       </div>
 <div class="award-row">
         <div class="award-main">
-          <span class="award-title"><span class="award-number">11.</span>  Outstanding Student Scholarship (Top 5%)</span>
+          <span class="award-title"><span class="award-number">12.</span>  Outstanding Student Scholarship (Top 5%)</span>
           <span class="award-date">2024 &amp; 2025</span>
         </div>
       </div>
 <div class="award-row">
         <div class="award-main">
-          <span class="award-title"><span class="award-number">12.</span>  Outstanding Student (Top 5%)</span>
+          <span class="award-title"><span class="award-number">13.</span>  Outstanding Student (Top 5%)</span>
           <span class="award-date">2024 &amp; 2025</span>
         </div>
       </div>
 <div class="award-row">
         <div class="award-main">
-          <span class="award-title"><span class="award-number">13.</span>  Outstanding Student Leader</span>
+          <span class="award-title"><span class="award-number">14.</span>  Outstanding Student Leader</span>
           <span class="award-date">2024 &amp; 2025</span>
         </div>
       </div>
@@ -1230,5 +1272,23 @@ if (lifeSlides.length) {
 <script src="portfolio-interactions.js?v=20260907-2" defer></script>
 <script src="instrument-embed.js" defer></script>
 <script src="spatial-embed.js?v=20260910" defer></script>
+
+<dialog class="poster-dialog" id="ins1-poster-dialog" aria-labelledby="ins1-poster-title">
+  <div class="poster-toolbar">
+    <h2 id="ins1-poster-title">INS-1 · SfN 2026 poster</h2>
+    <div class="poster-tools">
+      <button type="button" data-poster-zoom="out" aria-label="Zoom out">−</button>
+      <button type="button" data-poster-zoom="in" aria-label="Zoom in">+</button>
+      <button type="button" data-poster-zoom="fit">Fit</button>
+      <a href="sfn2026-ins1-poster.pdf" target="_blank" rel="noopener">Open PDF ↗</a>
+      <button type="button" data-poster-close aria-label="Close poster">Close</button>
+    </div>
+  </div>
+  <div class="poster-viewport" tabindex="0" aria-label="Poster image; scroll to move around when zoomed in">
+    <img data-poster-image data-src="sfn2026-ins1-poster.webp" width="4800" height="3600" alt="Full-resolution SfN 2026 INS-1 conference poster.">
+  </div>
+</dialog>
+
+<script src="portfolio-update.js?v=20261008" defer></script>
 </body>
 </html>
