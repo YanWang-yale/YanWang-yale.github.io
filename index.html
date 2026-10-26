@@ -232,28 +232,36 @@
 </div>
 <div class="research-section">
   <div class="research-subtitle">Bringing those questions into the lab</div>
-  <p class="research-text">That reading gave me a much firmer starting point when I joined the Scherzer Lab. Building on our computational team’s single-cell genetic mapping work, we are studying PM20D1 and the long noncoding RNA PM20D1-AS1 at a Parkinson’s disease risk locus. PM20D1 is a secreted N-acyl amino acid synthase/hydrolase. Using human induced pluripotent stem cells (hiPSCs) and derived neurons, I am investigating where these RNAs are located, how reducing their expression changes the cell, and which molecular partners could connect them to disease. Our experiments include RNA fractionation, qPCR, antisense oligonucleotide (ASO) treatment, and RNA sequencing.</p>
+  <p class="research-text">At Yale, I began studying PM20D1-AS1, a long noncoding RNA highlighted by our lab’s single-nucleus genetic mapping study of Parkinson’s disease. I wanted to understand how a noncoding risk variant changes this RNA, and how the RNA affects genes involved in disease. I work with human induced pluripotent stem cells (hiPSCs) and derived cortical neurons, using subcellular fractionation, RT-qPCR, antisense oligonucleotide (ASO) knockdown, and RNA sequencing.</p>
 </div>
 <div class="research-section">
   <div class="research-subtitle">Learning to analyze the data myself</div>
-  <p class="research-text">Alongside the experiments, I taught myself sequencing-data analysis so I could follow questions from a bench result back into human brain datasets. I examined three associated variants—rs9438393, rs1772143, and rs823080—and found that their linkage disequilibrium differed between populations. Two sequence-based models pointed to rs9438393 as the strongest candidate for changing local splicing. Its G allele increased predicted donor strength; in human brain neurons, it was also associated with a lower unspliced fraction at the same boundary. Looking at spliced and unspliced reads together led me to ask how local RNA processing affects the amount of PM20D1-AS1 that remains in the cell.</p>
-  <p class="research-text">We detected exon-junction-containing PM20D1-AS1 RNA in chromatin-associated fractions of hiPSCs. In derived cortical neurons, ASO treatment reduced its abundance by about <strong>80%</strong>. Using stringent selection criteria, our analysis identified <strong>168 responsive genes</strong>, including 148 with lower expression after treatment. <em>SNCA</em> and <em>SCD</em> were among them, and synaptic functions were enriched in the gene set. Sequence-based RNA–DNA triplex scores were higher than in both unrestricted and sequence-feature-matched random gene sets. I am now using these results to decide which RNA interactions to examine next and how to connect the expression changes to α-synuclein biology and lipid homeostasis.</p>
+  <p class="research-text">Alongside the experiments, I taught myself sequencing-data analysis so I could ask the same questions in human brain datasets. I compared three linked variants—rs9438393, rs1772143, and rs823080—using population genotypes, splicing predictions, and long-read RNA sequencing. SpliceAI and Pangolin both pointed to <strong>rs9438393</strong>: its risk-associated G allele increased predicted splice-donor strength. In brain neurons, G carriers also had more spliced PM20D1-AS1 and higher RNA abundance. Examining spliced and unspliced reads together helped me connect the genetic association to a specific step in RNA processing.</p>
+</div>
+<div class="research-section">
+  <div class="research-subtitle">Following PM20D1-AS1 inside the cell</div>
+  <p class="research-text">We recovered spliced PM20D1-AS1 from chromatin-associated fractions of hiPSCs. In cortical neurons derived from an <em>SNCA</em>-triplication line, ASO treatment reduced PM20D1-AS1 by about <strong>80%</strong>. We identified <strong>168 responsive genes</strong>, including 148 with lower expression after treatment. <em>SNCA</em>, which encodes α-synuclein, and the lipid-metabolism gene <em>SCD</em> both decreased. The gene set was enriched for synaptic functions and for predicted RNA–DNA triplex sequences.</p>
+  <p class="research-text">I then looked more closely at the neighboring gene <em>PM20D1</em>. Public chromatin-contact data contained PM20D1-AS1-compatible RNA reads paired with PM20D1 promoter regions. In GTEx, the two genes showed inverse expression in cortex, cultured fibroblasts, and subcutaneous adipose tissue. Together with our lab’s perturbation results, this supports a working model in which PM20D1-AS1 helps repress PM20D1. The neuronal knockdown results also point to a role in supporting <em>SNCA</em> expression. I am interested in how these two effects could connect α-synuclein production with the PM20D1 pathway that protects against its aggregation.</p>
+</div>
+<div class="research-section">
+  <div class="research-subtitle">Finding the next interactions to test</div>
+  <p class="research-text">To look beyond these two genes, I screened possible RNA and protein partners. RNA–RNA interaction and translation models highlighted <em>FBXO45</em>, <em>FOXO1</em>, and <em>NTN1</em>, with different predicted responses as RNA occupancy changed. Full-length and fragment-based RNA–protein modelling gave me two candidates to follow up, <strong>DHX9</strong> and <strong>PTBP1</strong>. I am using these results to choose experiments on how PM20D1-AS1 is processed, where it acts on chromatin, and which molecules it works with.</p>
 </div>
 <div class="research-workflow" aria-label="How my experiments and analyses connect">
   <div class="workflow-column">
     <span class="workflow-label">Wet lab</span>
-    <h4>PM20D1 / PM20D1-AS1</h4>
-    <ul><li>Subcellular RNA fractionation and qPCR</li><li>ASO knockdown and RNA sequencing</li><li>Cellular and mitochondrial functional assays</li></ul>
-    <p class="workflow-next">Next experiments: RNAscope and ChIRP with collaborators</p>
+    <h4>PM20D1-AS1 in human cells</h4>
+    <ul><li>Subcellular RNA fractionation and RT-qPCR</li><li>ASO knockdown in hiPSC-derived cortical neurons</li><li>RNA sequencing and gene-expression responses</li></ul>
+    <p class="workflow-next">Following up PM20D1 and SNCA regulation</p>
   </div>
   <div class="workflow-column">
     <span class="workflow-label">Dry lab</span>
-    <h4>PM20D1-AS1</h4>
-    <ul><li>Genotypes, linkage disequilibrium, and splicing</li><li>Brain RNA expression and neuronal responses</li><li>RNA–DNA interaction predictions</li></ul>
-    <p class="workflow-next">Using the results to choose the next experiment</p>
+    <h4>From risk variants to RNA interactions</h4>
+    <ul><li>Genotypes, splice predictions, and brain long-read RNA data</li><li>Chromatin contacts and expression across tissues</li><li>RNA–DNA, RNA–RNA, and RNA–protein modelling</li></ul>
+    <p class="workflow-next">Choosing molecular interactions to test</p>
   </div>
 </div>
-<p class="research-text research-update">These are current results from an ongoing project. I will update this account as we work through the next experiments.</p>
+<p class="research-text research-update">I will keep this section updated as the experiments progress.</p>
 
 </div>
         </div>
@@ -271,7 +279,7 @@
           </div>
 
           <div class="research-right">
-            <span class="research-date-inline">Sep. 2025 – Present</span>
+            <span class="research-date-inline">Sep 2024 – Present</span>
             <span class="research-arrow">&#9662;</span>
           </div>
         </button>
