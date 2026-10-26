@@ -13,13 +13,15 @@
   <link rel="stylesheet" href="spatial-embed.css?v=20260910">
 <script src="analytics.js?v=20260913" defer></script>
 <link rel="stylesheet" href="portfolio-update.css?v=20261008-awards-coursework">
+  <link rel="stylesheet" href="homepage-media/lab-hero.css?v=20261026">
+  <script src="homepage-media/lab-hero.js?v=20261026" defer></script>
 </head>
 <body>
 
 <header>
   <div class="container nav">
-    <div class="logo">Yan Wang</div>
-    <div class="nav-links">
+    <a class="logo" href="#home" aria-label="Yan Wang — Home"><span class="lab-monogram" aria-hidden="true">YW<span></span></span><span>Yan Wang<small>BIOLOGY &amp; RESEARCH</small></span></a><button type="button" class="lab-menu-toggle" aria-controls="lab-navigation" aria-expanded="false"><span>Menu</span><span class="lab-menu-icon" aria-hidden="true"></span></button>
+    <nav class="nav-links" id="lab-navigation" aria-label="Main navigation">
       <a href="#journey">Education</a>
       <a href="#research">Research</a>
       <a href="#publications">Publications</a>
@@ -29,27 +31,77 @@
       <a href="#awards">Awards</a>
      <a href="#resume-contact">CV & Contact</a>
        <a href="#life">Life</a>
-    </div>
+    </nav>
   </div>
 </header>
 
 <section class="hero" id="home">
   <div class="hero-home" id="hero-home">
-  <div class="container hero-grid">
-    <div class="hero-text">
+  <div class="lab-cover" data-scene="0">
+    <div class="lab-atmosphere" aria-hidden="true"></div>
+    <div class="lab-scenes" id="lab-scenes" aria-label="Research imagery">
+      <div class="lab-shot lab-shot-neural is-active" data-shot="0" aria-hidden="false">
+        <div class="lab-video-field">
+          <img src="homepage-media/fluorescent-worm-poster.webp" alt="Fluorescently labelled PVD neuron and its branching dendrites in C. elegans" decoding="async" fetchpriority="high">
+          <video id="lab-hero-video" class="lab-scene-video" data-src="homepage-media/fluorescent-worm.mp4" muted loop playsinline preload="none" poster="homepage-media/fluorescent-worm-poster.webp" tabindex="-1" aria-hidden="true"></video>
+        </div>
+        <div class="lab-scene-caption"><span class="lab-caption-kicker">01 / C. ELEGANS</span><h2>A neuron takes shape.</h2><p><em>C. elegans</em> · fluorescent dendrites</p></div>
+      </div>
+      <div class="lab-shot lab-shot-rna" data-shot="1" aria-hidden="true">
+        <div class="lab-video-field">
+          <img src="homepage-media/chroms-neurons-poster.webp" alt="Multicolor fluorescence reveals cortical neurons and their branching processes" decoding="async">
+          <video class="lab-scene-video" data-src="homepage-media/chroms-neurons.mp4" muted loop playsinline preload="none" poster="homepage-media/chroms-neurons-poster.webp" tabindex="-1" aria-hidden="true"></video>
+        </div>
+        <div class="lab-scene-caption"><span class="lab-caption-kicker">02 / NEURONS</span><h2>Neurons in color.</h2><p>ChroMS · multicolor cortical imaging</p></div>
+      </div>
+      <div class="lab-shot lab-shot-logic" data-shot="2" aria-hidden="true">
+        <div class="lab-video-field">
+          <img src="homepage-media/gene-oscillator-poster.webp" alt="Fluorescent E. coli carrying a synthetic three-node genetic oscillator" decoding="async">
+          <video class="lab-scene-video" data-src="homepage-media/gene-oscillator.mp4" muted loop playsinline preload="none" poster="homepage-media/gene-oscillator-poster.webp" tabindex="-1" aria-hidden="true"></video>
+        </div>
+        <div class="lab-scene-caption"><span class="lab-caption-kicker">03 / SYNTHETIC BIOLOGY</span><h2>Circuits in living cells.</h2><p>Three-color genetic oscillators · <em>E. coli</em></p></div>
+      </div>
+    </div>
+    <div class="container lab-cover-inner">
+      <div class="hero-text">
       <h1>
-        Hi, I’m <span class="accent">Yan Wang</span>
+        <span class="lab-greeting">Hi, I’m</span> <span class="accent">Yan Wang</span>
       </h1>
       <p>
         An undergraduate student from <strong>Wuhan University</strong>, majoring in Biology.
-        I used to work in <strong>WHU-iGEM</strong>. I am currently working in <strong>Prof. Yanxun Yu</strong>'s lab, and I am also a <strong>visiting undergraduate researcher</strong> in the <strong>Clemens Scherzer Lab</strong> at <strong>Yale University</strong>.
+        I used to work in <strong>WHU-iGEM</strong>. I previously worked in <strong>Prof. Yanxun Yu</strong>'s lab, and I am now a <strong>visiting undergraduate researcher</strong> in the <strong>Clemens Scherzer Lab</strong> at <strong>Yale University</strong>.
         I plan to pursue a <strong>PhD</strong> in the future.
       </p>
-      <a class="hero-scroll-cue" href="#research-interests" aria-label="Continue to my research interests">
-        <span aria-hidden="true">&#8595;</span>
-      </a>
-    </div>
 
+    <div class="lab-hero-tools">
+        <button type="button" class="motion-toggle" aria-controls="lab-scenes" aria-pressed="false" hidden><span class="motion-icon" aria-hidden="true"></span><span class="motion-text">Pause motion</span></button>
+        <button type="button" class="credits-toggle" aria-haspopup="dialog" aria-controls="lab-credits" hidden>Visual credits <span aria-hidden="true">↗</span></button>
+      </div>
+    </div>
+    </div>
+    <div class="container lab-cover-bottom">
+      <a class="lab-explore" href="#research-interests"><span>SCROLL TO EXPLORE</span><span class="lab-down" aria-hidden="true">↓</span></a>
+      <div class="lab-selector" role="group" aria-label="Choose background scene">
+        <button type="button" class="lab-scene-button is-active" data-scene="0" aria-pressed="true"><span class="lab-scene-number">01</span><span><em>C. elegans</em></span><span class="lab-scene-meter" aria-hidden="true"><i></i></span></button>
+        <button type="button" class="lab-scene-button" data-scene="1" aria-pressed="false"><span class="lab-scene-number">02</span><span>Neurons</span><span class="lab-scene-meter" aria-hidden="true"><i></i></span></button>
+        <button type="button" class="lab-scene-button" data-scene="2" aria-pressed="false"><span class="lab-scene-number">03</span><span>Gene circuits</span><span class="lab-scene-meter" aria-hidden="true"><i></i></span></button>
+      </div>
+    </div>
+    <div class="lab-bottom-edge" aria-hidden="true"></div>
+  </div>
+
+  <dialog id="lab-credits" class="lab-credits" aria-labelledby="lab-credits-title">
+    <button type="button" class="lab-credits-close" aria-label="Close visual credits" autofocus>×</button>
+    <h2 id="lab-credits-title">Visual credits</h2>
+    <p>Microscopy from three published studies, selected to reflect the questions that interest me.</p>
+    <ul>
+      <li><a href="https://www.frontiersin.org/journals/cell-and-developmental-biology/articles/10.3389/fcell.2022.1012820/full" target="_blank" rel="noopener">PVD dendrite growth in <em>C. elegans</em></a><br>Smith et al., <em>Frontiers in Cell and Developmental Biology</em> (2022), Movie S1. Light-sheet fluorescence time-lapse of YFP::RAB-10-labelled PVD neurons. Grayscale display inverted for a dark background; resized and played at twice the published speed. <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>.</li>
+      <li><a href="https://www.nature.com/articles/s41467-019-09552-9" target="_blank" rel="noopener">Multicolor multiscale brain imaging with chromatic multiphoton serial microscopy</a><br>Abdeladim et al., <em>Nature Communications</em> (2019), Supplementary Movie 10. A 3D view of fluorescently labelled cortical neurons. Silent excerpt from 2–13 seconds, resized and compressed. <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>.</li>
+      <li><a href="https://elifesciences.org/articles/09771/figures#media10" target="_blank" rel="noopener">Rapid cell-free forward engineering of novel genetic ring oscillators</a><br>Niederholtmeyer et al., <em>eLife</em> (2015), Video 10. Three-color fluorescence time-lapse of a synthetic genetic oscillator in <em>E. coli</em>. Cropped to the cell-filled region and played 3.25 times more slowly for display. <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>.</li>
+    </ul>
+  </dialog>
+
+  <div class="container hero-grid">
     <div class="hero-interest-stage" id="research-interests">
     
 
